@@ -1,0 +1,114 @@
+/* background-top */
+:root {
+    --fontSize-icons: calc(6px + 1vw);
+    /* --fontSize-text: calc(5px+10vw); */
+}
+
+/* body title */
+.title-top {
+    text-align: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.title-top::after {
+    content: "";
+    width: 25%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* body chứa sản phẩm  */
+.container-product {
+    .content-product {
+        width: 250px;
+        margin-top: 35px;
+
+        .product-information {
+            position: relative;
+
+            .product-detail {
+                img {
+                    opacity: 1;
+                    object-fit: scale-down;
+                    width: 100%;
+                    height: 230px;
+                    margin-bottom: 15px;
+                    /* font-size: var(--fontSize-text); */
+                }
+            }
+
+            .product-price {
+                font-size: 15px;
+                color: #333;
+                font-weight: 700;
+                font-family: Roboto-Regular;
+                margin-top: 15px;
+
+                button {
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    color: #d61c1f;
+                    margin: 0 40px;
+
+                }
+            }
+
+            .label-sold {
+                position: absolute;
+                top: 8px;
+                left: 1px;
+                font-size: 13px;
+                border-radius: 5px;
+                padding: 4px 8px;
+                background: #b1afaf;
+            }
+        }
+    }
+
+    .product-other {
+        margin-top: 40px;
+        text-align: center;
+
+        a {
+            text-decoration-line: none;
+            color: #d61c1f;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .container-product {
+        .content-product {
+            margin-top: 10px;
+            width: 185px;
+
+            .product-information {
+                .product-detail {
+                    img {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .product-price {
+                    button {
+                        display: none;
+                    }
+                }
+
+                .label-sold {
+                    top: 32px;
+                    left: 1px;
+                }
+            }
+        }
+    }
+
+
+}
